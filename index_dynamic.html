@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/app.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script
+      src="https://kit.fontawesome.com/5a6ad8754e.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet" />
+    <title>Pedro Rodrigues</title>
+  </head>
+  <body class="bg-[#1d1d20] text-[#fff] font-[Rubik]">
+    <div class="mx-[40px] my-[20px]">
+      <div
+        id="header"
+        class="flex justify-between h-[30px] mb-[10px] w-full sticky top-0 sm:px-[20px] gap-[20px] px-[0px] py-[30px] sm:py-[20px] items-center"
+        style="background: #1d1d20; z-index: 3;">
+        <div class="flex gap-[15px]">
+          <a href="#projects-done">Projects Developed</a>
+          <a href="#general-overview">My Journey</a>
+        </div>
+        <!-- Redirect to pages? -->
+        <div class="flex gap-[10px]">
+          <span class="cursor-pointer"><a href="mailto:pedro.miguel.rodrigues00@gmail.com"><i class="fa-regular fa-envelope"></i></a></span>
+          <span class="cursor-pointer"><a href="https://www.linkedin.com/in/pedro-rodrigues-268206226/"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></span>
+          <span class="cursor-pointer"><a href="https://github.com/PedroRodrigues527"><i class="fa-brands fa-github"></i></a></span>
+        </div>
+      </div>
+      <div id="content" class="w-full flex flex-col gap-[20px]">
+        <!-- Welcoming -->
+        <div class="flex justify-center items-center flex-col w-full text-center">
+          <p class="text-4xl">Hello! Welcome, I'm Pedro Rodrigues</p>
+          <div class="max-w-[750px] break-normal flex flex-col text-center">
+            <p>I'm a young software developer, who has the curiosity to learn new things everyday.
+            <br>The topics which i'm interest, goes around many areas, like: mathematics, computer science, science, personal developments, literature, history and learn and improve languages.
+            <br>Intermediate in English (Written and Spoke), Native Speaker in Portuguese.
+            <br>You can contact me via <a href="mailto:pedro.miguel.rodrigues00@gmail.com"><u>Email</u></a> or <a href="https://www.linkedin.com/in/pedro-rodrigues-268206226/"><u>LinkedIn</u></a></p>
+          </div>
+        </div>
+        <!-- Projects Done -->
+        <div id="projects-done-wrapper">
+          <p class="mb-[10px]" id="projects-done">Projects Developed</p>
+
+          <div
+            id="projects"
+            class=" flex flex-wrap gap-[30px] justify-center items-center">
+          </div>
+
+
+          <div class="flex justify-center mt-[20px] cursor-pointer">
+            <a href="https://github.com/PedroRodrigues527"
+              >See other projects</a
+            >
+          </div>
+        </div>
+
+        <!-- Work Expirence -->
+        <p id="general-overview">General Overview</p>
+        <div class="flex gap-[20px] px-[20px]" style="height: fit-content">
+          <div
+            style="
+              min-height: 100%;
+              min-width: 1px;
+              border-right: 1px solid rgb(117, 117, 117);
+            "></div>
+          <div class="flex flex-col gap-[20px]" id="overview-data">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="res/projects.js">
+  </script>
+    <script src="res/journey.js">
+  </script>
+  <script>
+    if (PROJECTS) {
+      const projectsContainer = document.getElementById("projects");
+
+      PROJECTS.forEach(project => {
+        const card = document.createElement("div");
+        card.className =
+          "w-[250px] max-w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]";
+        card.style.background = "#2f2f31";
+
+        const header = document.createElement("div");
+        header.className = "flex justify-between mb-[5px]";
+
+        const title = document.createElement("div");
+        title.className = "text-xl font-semibold";
+        title.textContent = project.title;
+
+        const linkContainer = document.createElement("div");
+        linkContainer.innerHTML = `
+          <a href="${project.url}" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        `;
+
+        header.appendChild(title);
+        header.appendChild(linkContainer);
+
+        const subtitle = document.createElement("div");
+        subtitle.className = "font-light";
+        subtitle.textContent = project.description;
+
+        const tools = document.createElement("div");
+        tools.className =
+          "font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]";
+        tools.textContent = project.languagesUsed;
+
+        card.appendChild(header);
+        card.appendChild(subtitle);
+        card.appendChild(tools);
+
+        projectsContainer.appendChild(card);
+      });
+
+    }
+
+    if (JOURNEY) {
+      const container = document.getElementById("overview-data");
+      
+      JOURNEY.forEach(item => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex relative";
+
+        const dot = document.createElement("div");
+        dot.className = "absolute left-[-26px] top-[7px] rounded-lg";
+        dot.style.border = "1px solid white";
+        dot.style.minWidth = "10px";
+        dot.style.minHeight = "10px";
+
+        const info = document.createElement("div");
+        info.className = "flex flex-col gap-1";
+
+        const company = document.createElement("span");
+        company.className = "text-md font-semibold";
+        company.textContent = item.company;
+
+        const role = document.createElement("span");
+        role.className = "text-xs";
+        role.textContent = item.role;
+
+        const time = document.createElement("span");
+        time.className = "text-xs";
+        time.textContent = item.time;
+
+        const contributions = document.createElement("div");
+        contributions.id = "things-done";
+
+        if (item.details) {
+          const contributionsWrapper = document.createElement("div");
+          contributionsWrapper.className = "text-xs flex flex-col";
+  
+          contributions.appendChild(contributionsWrapper);
+  
+          const involvements = document.createElement("span");
+          involvements.textContent = "Contributions: " + details.projects.toString();
+  
+          const toolsUsed = document.createElement("span");
+          toolsUsed.textContent = item.details.tools;
+  
+          contributionsWrapper.appendChild(involvements)
+          contributionsWrapper.appendChild(toolsUsed)
+        }
+
+        info.appendChild(company);
+        info.appendChild(role);
+        info.appendChild(time);
+
+        wrapper.appendChild(dot);
+        wrapper.appendChild(info);
+
+        container.appendChild(wrapper);
+      });
+    }
+  </script>
+
+</html>
