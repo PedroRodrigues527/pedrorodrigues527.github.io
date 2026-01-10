@@ -1,82 +1,413 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple Hello World GitHub Pages website">
-    <title>Hello World - Pedro Rodrigues</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .container {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin: 0 0 1rem 0;
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            margin: 0;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .github-link {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .github-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <p>Welcome to Pedro Rodrigues' GitHub Pages website</p>
-        <a href="https://github.com/PedroRodrigues527" class="github-link" target="_blank">
-            Visit my GitHub Profile
-        </a>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/app.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script
+      src="https://kit.fontawesome.com/5a6ad8754e.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet" />
+    <title>Pedro Rodrigues</title>
+  </head>
+  <body class="bg-[#1d1d20] text-[#fff] font-[Rubik]">
+    <div class="mx-[40px] my-[20px]">
+      <div
+        id="header"
+        class="flex justify-between h-[30px] mb-[10px] w-full sticky top-0 sm:px-[20px] gap-[20px] px-[0px] py-[30px] sm:py-[20px] items-center"
+        style="background: #1d1d20; z-index: 3;">
+        <div class="flex gap-[15px]">
+          <a href="#projects-done">Projects Developed</a>
+          <a href="#general-overview">My Journey</a>
+        </div>
+        <!-- Redirect to pages? -->
+        <div class="flex gap-[10px]">
+          <span class="cursor-pointer"><a href="mailto:pedro.miguel.rodrigues00@gmail.com"><i class="fa-regular fa-envelope"></i></a></span>
+          <span class="cursor-pointer"><a href="https://www.linkedin.com/in/pedro-rodrigues-268206226/"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a></span>
+          <span class="cursor-pointer"><a href="https://github.com/PedroRodrigues527"><i class="fa-brands fa-github"></i></a></span>
+        </div>
+      </div>
+      <div id="content" class="w-full flex flex-col gap-[20px]">
+        <!-- Welcoming -->
+        <div class="flex justify-center items-center flex-col w-full text-center">
+          <p class="text-4xl">Hello! Welcome, I'm Pedro Rodrigues</p>
+          <div class="max-w-[750px] break-normal flex flex-col text-center">
+            <p>I'm a young software developer, who has the curiosity to learn new things everyday.
+            <br>The topics which i'm interest, goes around many areas, like: mathematics, computer science, science, personal developments, literature, history and learn and improve languages.
+            <br>Intermediate in English (Written and Spoke), Native Speaker in Portuguese.
+            <br>You can contact me via <a href="mailto:pedro.miguel.rodrigues00@gmail.com"><u>Email</u></a> or <a href="https://www.linkedin.com/in/pedro-rodrigues-268206226/"><u>LinkedIn</u></a></p>
+          </div>
+        </div>
+        <!-- Projects Done -->
+        <div>
+          <p class="mb-[10px]" id="projects-done">Projects Developed</p>
+          <div
+            id="projects"
+            class=" flex flex-wrap gap-[30px] justify-center items-center">
+            <div
+              class="w-[250px] max-w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div id="project-header" class="flex justify-between mb-[5px]">
+                <div id="project-title" class="text-xl font-semibold">
+                  Nodejs_file_storage
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/Nodejs_file_storage"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-light">
+                It's a simple node.js local webserver, that allows the local
+                machine to store and manage files in the 'uploads' folder. Those
+                files in this folder can be accessed by other devices, in LAN.
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Javascript (node.js)
+              </div>
+            </div>
+            <div
+              class="w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div id="project-header" class="flex justify-between mb-[5px]">
+                <div id="project-title" class="text-xl font-semibold">
+                  Primitive Canvas
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/Primitive_Canvas"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-light">
+                (Academic project) Using Webgl, to do 3d movement (rotation,
+                translation movement, lightning), to random object, like cubes,
+                to some models.
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Javascript (webgl)
+              </div>
+            </div>
+            <div
+              class="w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div id="project-header" class="flex justify-between mb-[5px]">
+                <div id="project-title" class="text-xl font-semibold">
+                  HTTP Server JAVA
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/HTTP_Server_Java"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-light">
+                (Academic project) Java http server, with multithreading and
+                parallel programing.
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Java
+              </div>
+            </div>
+            <div
+              class="w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div
+                id="project-header"
+                class="flex justify-between mb-[5px] items-center">
+                <div id="project-title" class="text-xl font-semibold">
+                  Madeira-Weather
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/Madeira-Weather-Python-web_scraper"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-light">
+                Simple webscrapping project using python (beatifull soup) to
+                retrieve weather information (about madeira island)
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Python (+ Beautiful Soup)
+              </div>
+            </div>
+            <div
+              class="w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div id="project-header" class="flex justify-between mb-[5px]">
+                <div id="project-title" class="text-xl font-semibold">
+                  TLS CHAT
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/HTTP_Server_Java"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-light">
+                (Academic project) Java TLS chat, with multiple encriptions to
+                choose. Eg, Symmetric encription(DES, 3DES or AES), Assymetrical
+                encription(RSA)
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Java
+              </div>
+            </div>
+            <div
+              class="w-[250px] h-[250px] rounded-xl px-[10px] py-[5px] flex flex-col gap-[5px] cursor-pointer duration-200 hover:w-[270px] hover:h-[270px] hover:gap-[15px]"
+              style="background: #2f2f31">
+              <div
+                id="project-header"
+                class="flex justify-between mb-[5px] items-center">
+                <div id="project-title" class="text-xl font-semibold">
+                  Discord_bot_Roberto
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/PedroRodrigues527/Discord_bot_Roberto"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div id="project-subtitle" class="font-thin">
+                Roberto helps with the your most dificult choices and respondes
+                to your question in Portuguese, (and of course, it plays Rock
+                paper scissors).
+              </div>
+              <div
+                id="project-tools"
+                class="font-thin text-sm flex grow flex-col h-full justify-end font-[Courier New]">
+                Javascript (node.js + discord.js), Python (Beautiful Soup)
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-[20px] cursor-pointer">
+            <a href="https://github.com/PedroRodrigues527"
+              >See other projects</a
+            >
+          </div>
+        </div>
+
+        <!-- Work Expirence -->
+        <p id="general-overview">General Overview</p>
+        <div class="flex gap-[20px] px-[20px]" style="height: fit-content">
+          <div
+            style="
+              min-height: 100%;
+              min-width: 1px;
+              border-right: 1px solid rgb(117, 117, 117);
+            "></div>
+          <div class="flex flex-col gap-[20px]">
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold">Acin</span>
+                <span class="text-xs">Fullstack Development</span>
+                <span class="text-xs">14/11/2023 - present</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >Started Master's Degree in Computer Science</span
+                >
+                <span class="text-xs">09/2023</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold">VipaConnect</span>
+                <span class="text-xs">Fullstack Development</span>
+                <span class="text-xs">01/08/2022 - 30/06/2023</span>
+                <div id="things-done">
+                  <div class="text-xs flex flex-col">
+                    <span
+                      >- Projects Development:
+                      <a href="https://www.govgo.pt/">GovGo</a>,
+                      <a href="https://www.seeapp.pt/">SeeApp</a></span
+                    >
+                    <span
+                      >- Tools Used: PHP (+Laravel), HTML, CSS, Javascript
+                      (React + React Admin)+ Postgress</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold">SeeHealth</span>
+                <span class="text-xs">Fullstack Development</span>
+                <span class="text-xs"
+                  >01/07/2022 - 01/08/2022 (internship)</span
+                >
+                <div id="things-done">
+                  <div class="text-xs flex flex-col">
+                    <span
+                      >- Projects Development:
+                      <a href="https://www.seeapp.pt/">SeeApp</a></span
+                    >
+                    <span
+                      >- Tools Used: PHP (+Laravel), HTML, CSS, Javascript
+                      (React + React Admin)+ Postgress</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >Finished Computer Science and Engineering</span
+                >
+                <span class="text-xs">01/07/2022</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >Fundamentals of digital marketing</span
+                >
+                <span class="text-xs">11/02/2022</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >NDG Linux Essentials Certification</span
+                >
+                <span class="text-xs">07/12/2021</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >NDG Linux Unhatched Certification</span
+                >
+                <span class="text-xs">20/10/2021</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >Started Computer Science and Engineering</span
+                >
+                <span class="text-xs">01/09/2019</span>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="absolute left-[-26px] top-[7px] rounded-lg"
+                style="
+                  border: 1px solid white;
+                  min-width: 10px;
+                  min-height: 10px;
+                "></div>
+              <div class="flex flex-col gap-1">
+                <span class="text-md font-semibold"
+                  >Born</span
+                >
+                <span class="text-xs">Year 2000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
