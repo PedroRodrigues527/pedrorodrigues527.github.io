@@ -81,9 +81,9 @@
       </div>
     </div>
   </body>
-  <script src="res/projects.js">
+  <script src="res/js/projects.js">
   </script>
-    <script src="res/journey.js">
+    <script src="res/js/journey.js">
   </script>
   <script>
     if (PROJECTS) {
@@ -127,7 +127,6 @@
 
         projectsContainer.appendChild(card);
       });
-
     }
 
     if (JOURNEY) {
@@ -161,25 +160,30 @@
         const contributions = document.createElement("div");
         contributions.id = "things-done";
 
-        if (item.details) {
+        if (item.details != null) {
           const contributionsWrapper = document.createElement("div");
           contributionsWrapper.className = "text-xs flex flex-col";
   
           contributions.appendChild(contributionsWrapper);
   
-          const involvements = document.createElement("span");
-          involvements.textContent = "Contributions: " + details.projects.toString();
+          if (item.details.projects) {
+            const involvements = document.createElement("span");
+            involvements.textContent = "Contributions: " + item.details.projects.toString();
+            contributionsWrapper.appendChild(involvements)
+          }
+          
+          if (item.details.tools) {
+            const toolsUsed = document.createElement("span");
+            toolsUsed.textContent = item.details.tools;
+            contributionsWrapper.appendChild(toolsUsed)
+          }
   
-          const toolsUsed = document.createElement("span");
-          toolsUsed.textContent = item.details.tools;
-  
-          contributionsWrapper.appendChild(involvements)
-          contributionsWrapper.appendChild(toolsUsed)
         }
 
         info.appendChild(company);
         info.appendChild(role);
         info.appendChild(time);
+        info.appendChild(contributions);
 
         wrapper.appendChild(dot);
         wrapper.appendChild(info);

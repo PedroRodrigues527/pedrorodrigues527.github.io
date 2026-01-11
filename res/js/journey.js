@@ -3,13 +3,18 @@ const JOURNEY = [
     "company": "Tech4Home",
     "role": "Backend Developer",
     "time": "19/05/2025 - Present",
-    "details": null
+    "details": {
+      "tools": "Java and C++ applications"
+    }
   },
   {
     "company": "Acin",
     "role": "Fullstack Development",
     "time": "14/11/2023 - 14/04/2025",
-    "details": null
+    "details": {
+      "projects": ["IDok", "SIMplifica"],
+      "tools": "PHP (+ Laravel and CodeIgniter), HTML, CSS, Javascript/Typescript, SQL databases"
+    }
   },
   {
     "company": "Started Master's Degree in Computer Science",
