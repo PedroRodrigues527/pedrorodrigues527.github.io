@@ -17,9 +17,9 @@ const JOURNEY = [
     }
   },
   {
-    "company": "Started Master's Degree in Computer Science",
+    "company": "Master's Degree in Computer Science",
     "role": null,
-    "time": "09/2023",
+    "time": "09/2023 - Present",
     "details": null
   },
   {
